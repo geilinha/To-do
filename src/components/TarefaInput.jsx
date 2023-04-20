@@ -1,6 +1,6 @@
-import styles from './Tarefa.module.css'
+import styles from './TarefaInput.module.css'
 
-export function Tarefa() {
+export function TarefaInput() {
     return (
         <div className={styles.tarefa}>
             <input type="text" placeholder="Adicione uma nova tarefa"/>

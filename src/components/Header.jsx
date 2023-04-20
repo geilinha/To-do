@@ -5,7 +5,7 @@ export function Header() {
     return (
         <header className={styles.header}>
             <img src={rocketLogo} alt="" />
-            <h1>todo</h1>
+            <p>todo</p>
         </header>
     )
 }

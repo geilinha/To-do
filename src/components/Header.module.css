@@ -5,9 +5,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
 
-
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
 }
 
 header img {
@@ -15,7 +17,12 @@ header img {
     height: 2.25rem;
 }
 
-header h1 {
+header p {
     font-size: 2.5rem;
-    color: var(--purple);
+    background: linear-gradient(to right, var(--blue) 45%, var(--purpleDark) 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
 }
+

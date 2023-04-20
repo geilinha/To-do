@@ -1,6 +1,6 @@
 import '../styles/global.css'
 import { Header } from './Header'
-import { Tarefa } from './Tarefa'
+import { TarefaInput } from './TarefaInput'
 
 function App() {
     return(
@@ -8,7 +8,7 @@ function App() {
             <Header />
             
             <main>
-                <Tarefa />
+                <TarefaInput />
             </main>
         </div>
     )
