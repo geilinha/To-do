@@ -1,0 +1,13 @@
+
+
+.whapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.whapper main { 
+    width: 46rem;
+    margin-top: -2rem;
+}
