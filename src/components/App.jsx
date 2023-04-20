@@ -1,9 +1,16 @@
 import '../styles/global.css'
 import { Header } from './Header'
+import { Tarefa } from './Tarefa'
 
 function App() {
     return(
-        <Header />
+        <div>
+            <Header />
+            
+            <main>
+                <Tarefa />
+            </main>
+        </div>
     )
 }
 
