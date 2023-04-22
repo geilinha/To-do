@@ -5,9 +5,13 @@ import { Trash } from '@phosphor-icons/react'
 export function TarefaCard(props) {
     return (
         <div className={styles.TarefaCard}>
-            <CheckCircle size={24} />
+            <button>
+                <CheckCircle size={24} color="#4EA8DE"/>
+            </button>
             <p>{props.content}</p>
-            <Trash size={24}/>
+            <button>
+                <Trash size={24} color="#808080"/>
+            </button>
         </div>
     )
 }

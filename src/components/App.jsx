@@ -12,10 +12,32 @@ function App() {
             <div className={styles.whapper}>
             
                 <main>
-                    <TarefaInput />
-                    <TarefaCard
-                        content="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."
-                    />
+                    <div className={styles.createTask}>
+                         <TarefaInput />
+                    </div>
+                    <div className={styles.body}>
+                        <div className={styles.index}>
+                            <p className={styles.totalTasks}>Tarefas criadas <span>{5}</span></p>
+                            <p className={styles.concluideTasks}>Concluídas <span>{2} de {5}</span></p>
+                        </div>
+                        <div className={styles.tasks}>
+                            <TarefaCard
+                                content="Integer urna interdum massa libero auctor neque turpis turpis semper."
+                            />
+                            <TarefaCard
+                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
+                            />
+                            <TarefaCard
+                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
+                            />
+                            <TarefaCard
+                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
+                            />
+                            <TarefaCard
+                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
+                            />
+                        </div>
+                    </div>
                 </main>
             
             </div>
