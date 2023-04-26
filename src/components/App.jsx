@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import '../styles/global.css'
 import styles from './App.module.css'
 import { Header } from './Header'
@@ -5,6 +6,16 @@ import { TarefaCard } from './TarefaCard'
 import { TarefaInput } from './TarefaInput'
 
 function App() {
+
+    const [tarefa, setTarefa] = useState([]);
+
+    function adicionaTarefa(content) {
+        setTarefa([...tarefa, content])
+    }
+
+
+
+
     return(
         <div>
             <Header />
@@ -13,7 +24,7 @@ function App() {
             
                 <main>
                     <div className={styles.createTask}>
-                         <TarefaInput />
+                         <TarefaInput  onAdicionaTarefa={adicionaTarefa}/>
                     </div>
                     <div className={styles.body}>
                         <div className={styles.index}>
@@ -21,21 +32,11 @@ function App() {
                             <p className={styles.concluideTasks}>Concluídas <span>{2} de {5}</span></p>
                         </div>
                         <div className={styles.tasks}>
-                            <TarefaCard
-                                content="Integer urna interdum massa libero auctor neque turpis turpis semper."
-                            />
-                            <TarefaCard
-                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
-                            />
-                            <TarefaCard
-                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
-                            />
-                            <TarefaCard
-                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
-                            />
-                            <TarefaCard
-                                content="Integer urna interdum massa libero auctor neque turpis turpis semper.Integer urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semperInteger urna interdum massa libero auctor neque turpis turpis semper"
-                            />
+                            {tarefa.map((tar) => {
+                                return (
+                                    <TarefaCard content={tar}/>
+                                )
+                            })}
                         </div>
                     </div>
                 </main>
