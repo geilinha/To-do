@@ -1,21 +1,30 @@
-
-
 .TarefaCard {
-    display: flex;
-    padding: 1rem;
-    justify-content: space-between;
-    background: var(--gray-500);
-    border-radius: 0.5rem;
-    color: aliceblue;
-    gap: 0.75rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  background: var(--gray-500);
+  border-radius: 0.5rem;
+  color: aliceblue;
+  gap: 0.75rem;
 }
 
 .TarefaCard p {
-    width: 100%;
+  width: 100%;
 }
 
 .TarefaCard button {
-    display: flex;
-    background: none;
-    border: none;
+  display: flex;
+  background: none;
+  border: none;
+}
+
+.delete {
+  color: var(--gray-300);
+}
+
+.delete :hover {
+  background: var(--gray-400);
+  color: var(--danger);
+  padding: 0.3125rem;
+  border-radius: 4px;
 }

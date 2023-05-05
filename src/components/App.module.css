@@ -1,61 +1,58 @@
-
-
 .whapper {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.whapper main { 
-    width: 46rem;
+.whapper main {
+  width: 46rem;
 }
 
 .createTask {
-    margin-top: -2rem;
+  margin-top: -2rem;
 }
 
 .body {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .tasks {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .body {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .index {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 0,875rem;
-    
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0, 875rem;
 }
 
 .totalTasks {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .concluideTasks {
-    color: var(--purpleDark);
+  color: var(--purpleDark);
 }
 
 .totalTasks span {
-    color: var(--blue);
+  color: var(--blue);
 }
 
 .index span {
-    background: var(--gray-400);
-    padding: 2px 8px;
-    border-radius: 999px;
-    color: var(--gray-100);
+  background: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--gray-100);
 }

@@ -1,30 +1,39 @@
-
 .tarefa {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .tarefa input {
-    display: flex;
-    width: 39.875rem;
-    padding: 1rem;
-    border-radius: 8px;
-    background: var(--gray-500);
-    color: var(--gray-300);
-    border: none;
+  display: flex;
+  width: 39.875rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--gray-500);
+  color: var(--gray-100);
+  border: none;
 }
 
-.tarefa button {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 8px;
-    background: var(--blueDark);
-    color: var(--gray-100);
-    border: none;
-    gap: 0.5rem;
+.tarefa input:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--purpleDark);
+}
 
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 0.875rem;
+.button {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--blueDark);
+  color: var(--gray-100);
+  border: none;
+  gap: 0.5rem;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: var(--blue);
 }
