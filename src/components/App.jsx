@@ -11,18 +11,33 @@ function App() {
   const id = tarefa.length;
 
   function adicionaTarefa(content) {
-    const item = setTarefa([...tarefa, { id, content, isChecked: false }]);
+    setTarefa([...tarefa, { id, content, isChecked: false }]);
   }
 
-  function removeTarefa(contentToDelete) {
+  function removeTarefa(id) {
     const filteredList = tarefa.filter((content) => {
-      return content.id !== contentToDelete;
+      return content.id !== id;
     });
 
     setTarefa(filteredList);
   }
 
-  const quantidadeTarefa = tarefa.length;
+  const tarefaQuantidade = tarefa.length;
+  const tarefaConcluidaList = tarefa.filter((content) => {
+    return content.isChecked === true;
+  });
+
+  const tarefaConcluida = tarefaConcluidaList.length;
+
+  function handleChecked(id) {
+    const newTarefaChecked = tarefa.map((tar) => {
+      if (tar.id === id) {
+        tar.isChecked = !tar.isChecked;
+      }
+      return tar;
+    });
+    setTarefa(newTarefaChecked);
+  }
 
   return (
     <div>
@@ -35,12 +50,12 @@ function App() {
           <div className={styles.body}>
             <div className={styles.index}>
               <p className={styles.totalTasks}>
-                Tarefas criadas <span>{quantidadeTarefa}</span>
+                Tarefas criadas <span>{tarefaQuantidade}</span>
               </p>
               <p className={styles.concluideTasks}>
                 Concluídas{" "}
                 <span>
-                  {2} de {quantidadeTarefa}
+                  {tarefaConcluida} de {tarefaQuantidade}
                 </span>
               </p>
             </div>
@@ -51,6 +66,7 @@ function App() {
                     key={tar.id}
                     content={tar}
                     onRemoveTarefa={removeTarefa}
+                    onChecked={handleChecked}
                   />
                 );
               })}

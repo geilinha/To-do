@@ -4,25 +4,24 @@ import { CheckCircle } from "@phosphor-icons/react";
 import { Trash } from "@phosphor-icons/react";
 import { useState } from "react";
 
-export function TarefaCard({ content, onRemoveTarefa }) {
+export function TarefaCard({ content, onRemoveTarefa, onChecked }) {
   function handleDeleteTarefa() {
     console.log(content);
     onRemoveTarefa(content.id);
   }
 
-  const [isChecked, setIsChecked] = useState(false);
+  function check() {
+    console.log(content.id);
+    onChecked(content.id);
+  }
 
   return (
     <div className={styles.TarefaCard}>
-      <button
-        onClick={() => {
-          setIsChecked(!isChecked);
-        }}
-      >
-        {isChecked ? (
-          <CheckCircle className={styles.check} size={24} color="#4EA8DE" />
+      <button onClick={check}>
+        {content.isChecked ? (
+          <CheckCircle className={styles.checked} size={24} color="#4EA8DE" />
         ) : (
-          <Circle className={styles.checked} size={24} color="#4EA8DE" />
+          <Circle size={24} color="#4EA8DE" />
         )}
       </button>
       <p>{content.content}</p>
